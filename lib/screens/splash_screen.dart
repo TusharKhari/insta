@@ -21,36 +21,51 @@ class _SplashScreenState extends State<SplashScreen> {
             context, MaterialPageRoute(builder: (context) => FirstScreen())));
   }
 
+  final Shader linearGradient = LinearGradient(
+      // colors: <Color>[Color(0xffDA44bb), Color(0xff8921aa),],
+      colors: [
+        Colors.pink,
+        // Colors.yellow.shade100,
+        Colors.pink.shade900,
+      ]).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
   @override
   Widget build(BuildContext context) {
-    return  Center(
-        child:  Column(
-      children: [
-        const SizedBox(
-          width: double.infinity,
-          height: 210,
-        ),
-        const Text('instagram'),
-        const SizedBox(
-          width: double.infinity,
-          height: 90,
-        ),
-        Row(
-          children: [
-            const Text('made with '),
-            const Icon(
-              Icons.favorite,
-              color: Colors.green,
+    return Scaffold(
+      body: Center(
+          child: Column(
+        //  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          const SizedBox(
+            // width: double.infinity,
+            height: 150,
+          ),
+          Image.asset('assets/Instagram-Logo.wine.png'),
+          const SizedBox(
+            //  width: double.infinity,
+            height: 200,
+          ),
+          const Text(
+            'From',
+            style: TextStyle(fontSize: 18, color: Colors.black54),
+          ),
+          Text(
+            "K H A R I",
+            style: TextStyle(
+              fontStyle: FontStyle.italic,
+              fontSize: 60,
+              foreground: Paint()..shader = linearGradient,
+              fontWeight: FontWeight.w500,
             ),
-            const Text('by'),
-          ],
-        ),
-        const SizedBox(
-          width: double.infinity,
-          height: 90,
-        ),
-        const Text("KHARI")
-      ],
-    ));
+          ),
+          const Text(
+            "Made with love in Flutter",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w400,
+            ),
+          )
+        ],
+      )),
+    );
   }
 }
