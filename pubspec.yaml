@@ -40,6 +40,18 @@ dependencies:
   intl: ^0.18.1
   provider: ^6.0.1
   uuid: ^3.0.5
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/oie_11214451Tb6vqbjx.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/oie_11214451Tb6vqbjx.jpg"
+    background_color: "#00FFFFFF"
+    theme_color: "#00FFFFFF"
 
 dev_dependencies:
   flutter_lints: ^2.0.1

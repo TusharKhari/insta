@@ -10,6 +10,12 @@ import 'package:instagram_clone_flutter/screens/login_screen.dart';
 import 'package:instagram_clone_flutter/utils/colors.dart';
 import 'package:provider/provider.dart';
 
+
+// flutter run -d chrome --web-renderer html // to run the app
+
+// flutter build web --web-renderer html --release // to generate a production build
+
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -17,11 +23,12 @@ void main() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
-        apiKey: "AIzaSyCZ-xrXqD5D19Snauto-Fx_nLD7PLrBXGM",
-        appId: "1:585119731880:web:eca6e4b3c42a755cee329d",
-        messagingSenderId: "585119731880",
-        projectId: "instagram-clone-4cea4",
-        storageBucket: 'instagram-clone-4cea4.appspot.com'
+
+        apiKey: "AIzaSyALiBqnYBHbh6YBnxR1xOK6B1AhAiRa1PE",
+  projectId: "insta-c0fbd",
+  storageBucket: "insta-c0fbd.appspot.com",
+  messagingSenderId: "970569335467",
+  appId: "1:970569335467:web:bb5047e3ff3c4585f96dee"
       ),
     );
   } else {
